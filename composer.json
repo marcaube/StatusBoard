@@ -1,0 +1,23 @@
+{
+    "name": "ob/statusboard",
+    "description": "Library to render widgets for panic's StatusBoard ipad app",
+    "homepage": "https://github.com/marcaube/StatusBoard",
+    "license": "MIT",
+    "type": "library",
+    "keywords": ["status", "statusboard", "widget", "dashboard", "panic"],
+    "authors": [
+        {
+            "name": "Marc Aubé",
+            "homepage": "http://marcaube.ca"
+        }
+    ],
+    "require": {
+        "php": ">=5.3"
+    },
+    "target-dir": "Ob/StatusBoard",
+    "autoload": {
+        "psr-0": {
+            "StatusBoard": "src/"
+        }
+    }
+}
