@@ -14,7 +14,6 @@
     "require": {
         "php": ">=5.3"
     },
-    "target-dir": "Ob/StatusBoard",
     "autoload": {
         "psr-0": {
             "StatusBoard": "src/"
