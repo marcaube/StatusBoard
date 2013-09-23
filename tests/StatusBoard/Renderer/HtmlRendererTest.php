@@ -1,0 +1,41 @@
+<?php
+
+use StatusBoard\Renderer\HtmlRenderer;
+
+class HtmlRendererTest extends \PHPUnit_Framework_TestCase
+{
+    /**
+     * Test the html table rendering
+     */
+    public function testTableRender()
+    {
+        $input = array(array('cell1', 'cell2', 'cell3'));
+        $output = "<table><tr><td>cell1</td><td>cell2</td><td>cell3</td></tr></table>";
+
+        // Create a widget stub/
+        $widget = $this->getMock('StatusBoard\Widget\TableWidget');
+        $widget->expects($this->any())
+            ->method('getRows')
+            ->will($this->returnValue($input));
+
+        $renderer = new HtmlRenderer();
+
+        $this->assertEquals($output, $renderer->render($widget));
+    }
+
+    /**
+     * Test the supports method
+     */
+    public function testSupports()
+    {
+        $tableWidget = $this->getMock('StatusBoard\Widget\TableWidget');
+        $graphWidget = $this->getMock('StatusBoard\Widget\GraphWidget');
+        $diyWidget   = $this->getMock('StatusBoard\Widget\DiyWidget');
+
+        $renderer = new HtmlRenderer();
+
+        $this->assertEquals(true, $renderer->supports($tableWidget));
+        $this->assertEquals(false, $renderer->supports($graphWidget));
+        $this->assertEquals(false, $renderer->supports($diyWidget));
+    }
+}

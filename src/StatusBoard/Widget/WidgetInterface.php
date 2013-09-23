@@ -7,5 +7,4 @@ namespace StatusBoard\Widget;
  */
 interface WidgetInterface
 {
-
 }

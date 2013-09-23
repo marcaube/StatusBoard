@@ -11,6 +11,29 @@ graphs and tables. It provides classes to handle tables, graphs and DIY widgets.
 
 This project is not ready for use, come back later!
 
+### Create a table widget
+
+```php
+<?php
+
+require '../vendor/autoload.php';
+
+// Create a Table widget
+$widget = new StatusBoard\Widget\TableWidget();
+$widget->setRows(array(
+    array('Project', 'Version', 'lang', 'Status'),
+    array('StatusBoard', '0.1.0', 'PHP', 'Ok'),
+    array('ObHighchartsBundle', '1.0.0', 'PHP', 'Fail')
+));
+
+// Register an HTML renderer
+$renderer = new StatusBoard\Renderer\WidgetRenderer();
+$renderer->setRenderers(array(
+    new StatusBoard\Renderer\HtmlRenderer()
+));
+
+echo $renderer->render($widget);
+```
 
 ## Installation
 
