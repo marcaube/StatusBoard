@@ -1,8 +1,10 @@
 # StatusBoard
 
-*StatusBoard* is a small PHP library that helps you render [StatusBoard](http://panic.com/statusboard/) widgets like
+**StatusBoard** is a small PHP library that helps you render [StatusBoard](http://panic.com/statusboard/) widgets like
 graphs and tables. It provides classes to handle tables, graphs and DIY widgets.
 
+[![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/marcaube/StatusBoard/badges/quality-score.png?s=a478bbd524d03e6909e5560a4b10e3775ce022ce)](https://scrutinizer-ci.com/g/marcaube/StatusBoard/)
+[![Code Coverage](https://scrutinizer-ci.com/g/marcaube/StatusBoard/badges/coverage.png?s=3173a082911b93f967a732443565f71d91063f56)](https://scrutinizer-ci.com/g/marcaube/StatusBoard/)
 
 ## Usage
 
