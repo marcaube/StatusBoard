@@ -2,7 +2,7 @@
 
 use StatusBoard\Renderer\WidgetRenderer;
 
-class HtmlRendererTest extends \PHPUnit_Framework_TestCase
+class WidgetRendererTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Test that an exception is raised when no suitable renderers are found
