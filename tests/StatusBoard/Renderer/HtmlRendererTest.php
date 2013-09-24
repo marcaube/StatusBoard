@@ -12,9 +12,9 @@ class HtmlRendererTest extends \PHPUnit_Framework_TestCase
         $input = array(array('cell1', 'cell2', 'cell3'));
         $output = "<table><tr><td>cell1</td><td>cell2</td><td>cell3</td></tr></table>";
 
-        // Create a widget stub/
+        // Create a widget stub
         $widget = $this->getMock('StatusBoard\Widget\TableWidget');
-        $widget->expects($this->any())
+        $widget->expects($this->once())
             ->method('getRows')
             ->will($this->returnValue($input));
 
