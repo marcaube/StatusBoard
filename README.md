@@ -7,9 +7,11 @@ graphs and tables. It provides classes to handle tables, graphs and DIY widgets.
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/marcaube/StatusBoard/badges/quality-score.png?s=a478bbd524d03e6909e5560a4b10e3775ce022ce)](https://scrutinizer-ci.com/g/marcaube/StatusBoard/)
 [![Code Coverage](https://scrutinizer-ci.com/g/marcaube/StatusBoard/badges/coverage.png?s=3173a082911b93f967a732443565f71d91063f56)](https://scrutinizer-ci.com/g/marcaube/StatusBoard/)
 
+
 ## Usage
 
 This project is not ready for use, come back later!
+
 
 ### Create a table widget
 
@@ -21,12 +23,13 @@ require '../vendor/autoload.php';
 // Create a Table widget
 $widget = new StatusBoard\Widget\TableWidget();
 $widget->setRows(array(
-    array('Project', 'Version', 'lang', 'Status'),
+    array('Project', 'Version', 'Lang', 'Status'),
     array('StatusBoard', '0.1.0', 'PHP', 'Ok'),
     array('ObHighchartsBundle', '1.0.0', 'PHP', 'Fail')
 ));
 
 // Register an HTML renderer
+// You could also easily write your own renderer if the stock one doesn't fit your needs
 $renderer = new StatusBoard\Renderer\WidgetRenderer();
 $renderer->setRenderers(array(
     new StatusBoard\Renderer\HtmlRenderer()
@@ -34,6 +37,11 @@ $renderer->setRenderers(array(
 
 echo $renderer->render($widget);
 ```
+
+Add the table to StatusBoard app and you get this:
+
+![Table Widget](doc/table-01.jpg)
+
 
 ## Installation
 
