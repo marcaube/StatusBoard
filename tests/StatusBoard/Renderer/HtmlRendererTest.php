@@ -24,6 +24,17 @@ class HtmlRendererTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test rendering an unsupported widget
+     */
+    public function testUnsupportedRender()
+    {
+        $renderer = new HtmlRenderer();
+        $widget = $this->getMock('StatusBoard\Widget\GraphWidget');
+
+        $renderer->render($widget);
+    }
+
+    /**
      * Test the supports method
      */
     public function testSupports()

@@ -5,6 +5,9 @@ namespace StatusBoard\Renderer;
 use StatusBoard\Widget\WidgetInterface;
 use StatusBoard\Widget\TableWidget;
 
+/**
+ * Class HtmlRenderer
+ */
 class HtmlRenderer implements RendererInterface
 {
     /**

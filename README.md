@@ -43,6 +43,51 @@ Add the table to StatusBoard app and you get this:
 ![Table Widget](doc/table-01.jpg)
 
 
+### Create a graph widget
+
+```php
+<?php
+
+require '../vendor/autoload.php';
+
+// Register an Json renderer
+$renderer = new StatusBoard\Renderer\WidgetRenderer();
+$renderer->setRenderers(array(
+    new StatusBoard\Renderer\JsonRenderer()
+));
+
+// Create a Graph widget
+$widget = new StatusBoard\Widget\GraphWidget();
+$data1 = new \StatusBoard\Model\GraphData();
+$data2 = new \StatusBoard\Model\GraphData();
+
+// First dataset
+$data1->setTitle('Visits')
+    ->setColor('blue')
+    ->addDataPoint('2012', 3963)
+    ->addDataPoint('2013', 4561);
+
+// Second dataset
+$data2->setTitle('Unique Visits')
+    ->setColor('orange')
+    ->addDataPoint('2012', 2105)
+    ->addDataPoint('2013', 3001);
+
+$widget->setTitle("Visits")
+    ->showTotal(true)
+    ->addDataPoints($data1)
+    ->addDataPoints($data2);
+
+header('Content-Type: application/json');
+
+echo $renderer->render($widget);
+```
+
+Add the graph to StatusBoard app and you get this:
+
+![Graph Widget](doc/graph-01.jpg)
+
+
 ## Installation
 
 You can install StatusBoard using composer, just create a `composer.json` file for your project:
