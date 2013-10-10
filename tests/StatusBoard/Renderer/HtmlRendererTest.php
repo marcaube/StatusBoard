@@ -24,6 +24,24 @@ class HtmlRendererTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test the DIY widget rendering
+     */
+    public function testDiyRenderer()
+    {
+        $html = "<h1>HTML DIY Widget</h1>";
+
+        // Create a widget stub
+        $widget = $this->getMock('StatusBoard\Widget\DiyWidget');
+        $widget->expects($this->once())
+            ->method('getHtml')
+            ->will($this->returnValue($html));
+
+        $renderer = new HtmlRenderer();
+
+        $this->assertEquals($html, $renderer->render($widget));
+    }
+
+    /**
      * Test rendering an unsupported widget
      */
     public function testUnsupportedRender()
@@ -47,6 +65,6 @@ class HtmlRendererTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(true, $renderer->supports($tableWidget));
         $this->assertEquals(false, $renderer->supports($graphWidget));
-        $this->assertEquals(false, $renderer->supports($diyWidget));
+        $this->assertEquals(true, $renderer->supports($diyWidget));
     }
 }

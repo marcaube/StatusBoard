@@ -18,6 +18,10 @@ class HtmlRenderer implements RendererInterface
         if (is_a($widget, "StatusBoard\\Widget\\TableWidget")) {
             return $this->renderTable($widget);
         }
+
+        if (is_a($widget, "StatusBoard\\Widget\\DiyWidget")) {
+            return $widget->getHtml();
+        }
     }
 
     /**
@@ -26,6 +30,10 @@ class HtmlRenderer implements RendererInterface
     public function supports(WidgetInterface $widget)
     {
         if (is_a($widget, "StatusBoard\\Widget\\TableWidget")) {
+            return true;
+        }
+
+        if (is_a($widget, "StatusBoard\\Widget\\DiyWidget")) {
             return true;
         }
 
