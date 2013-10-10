@@ -7,11 +7,12 @@ graphs and tables. It provides classes to handle tables, graphs and DIY widgets.
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/marcaube/StatusBoard/badges/quality-score.png?s=a478bbd524d03e6909e5560a4b10e3775ce022ce)](https://scrutinizer-ci.com/g/marcaube/StatusBoard/)
 [![Code Coverage](https://scrutinizer-ci.com/g/marcaube/StatusBoard/badges/coverage.png?s=3173a082911b93f967a732443565f71d91063f56)](https://scrutinizer-ci.com/g/marcaube/StatusBoard/)
 
+The library is built with a service-oriented architecture in mind. The renderers can easily be defined as services in
+you favorite framework and the decoupled code enables you to override any classes with your own implementation in a
+pinch.
+
 
 ## Usage
-
-This project is not ready for use, come back later!
-
 
 ### Create a table widget
 
@@ -41,6 +42,8 @@ echo $renderer->render($widget);
 Add the table to StatusBoard app and you get this:
 
 ![Table Widget](doc/table-01.jpg)
+
+See the official [Table tutorial](http://www.panic.com/statusboard/docs/table_tutorial.pdf) for more infos.
 
 
 ### Create a graph widget
@@ -86,6 +89,8 @@ echo $renderer->render($widget);
 Add the graph to StatusBoard app and you get this:
 
 ![Graph Widget](doc/graph-01.jpg)
+
+See the official [Graph tutorial](http://www.panic.com/statusboard/docs/graph_tutorial.pdf) for more infos.
 
 
 ### Create a DIY widget (a.k.a. HTML widget)
@@ -138,6 +143,8 @@ echo $renderer->render($widget);
 Add the graph to StatusBoard app and you get this:
 
 ![Graph Widget](doc/diy-01.jpg)
+
+See the official [DIY tutorial](http://www.panic.com/statusboard/docs/diy_tutorial.pdf) for more infos.
 
 
 ## Installation
