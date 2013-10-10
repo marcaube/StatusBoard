@@ -88,6 +88,58 @@ Add the graph to StatusBoard app and you get this:
 ![Graph Widget](doc/graph-01.jpg)
 
 
+### Create a DIY widget (a.k.a. HTML widget)
+
+```php
+<?php
+
+require '../vendor/autoload.php';
+
+// Create a DIY widget
+$widget = new StatusBoard\Widget\DiyWidget();
+
+// You should get your HTML from a template engine
+$widget->setHtml('
+    <style type="text/css">
+        html,
+        body,
+        .container {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        body {
+            color: white;
+            font-family: Roadgeek2005SeriesC, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 60px;
+            line-height: 120px;
+            margin-top: 50px;
+        }
+    </style>
+    <div class="container">
+        <h1>HTML!</h1>
+    </div>
+');
+
+// Register an HTML renderer
+$renderer = new StatusBoard\Renderer\WidgetRenderer();
+$renderer->setRenderers(array(
+    new StatusBoard\Renderer\HtmlRenderer()
+));
+
+echo $renderer->render($widget);
+```
+
+Add the graph to StatusBoard app and you get this:
+
+![Graph Widget](doc/diy-01.jpg)
+
+
 ## Installation
 
 You can install StatusBoard using composer, just create a `composer.json` file for your project:
