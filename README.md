@@ -6,6 +6,7 @@ graphs and tables. It provides classes to handle tables, graphs and DIY widgets.
 [![Build Status](https://travis-ci.org/marcaube/StatusBoard.png?branch=master)](https://travis-ci.org/marcaube/StatusBoard)
 [![Scrutinizer Quality Score](https://scrutinizer-ci.com/g/marcaube/StatusBoard/badges/quality-score.png?s=a478bbd524d03e6909e5560a4b10e3775ce022ce)](https://scrutinizer-ci.com/g/marcaube/StatusBoard/)
 [![Code Coverage](https://scrutinizer-ci.com/g/marcaube/StatusBoard/badges/coverage.png?s=3173a082911b93f967a732443565f71d91063f56)](https://scrutinizer-ci.com/g/marcaube/StatusBoard/)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/2c074af8-7d3d-4459-b54f-80fdbb110f4c/mini.png)](https://insight.sensiolabs.com/projects/2c074af8-7d3d-4459-b54f-80fdbb110f4c)
 
 The library is built with a service-oriented architecture in mind. The renderers can easily be defined as services in
 you favorite framework and the decoupled code enables you to override any classes with your own implementation in a
