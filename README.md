@@ -54,7 +54,7 @@ See the official [Table tutorial](http://www.panic.com/statusboard/docs/table_tu
 
 require '../vendor/autoload.php';
 
-// Register an Json renderer
+// Register a Json renderer
 $renderer = new StatusBoard\Renderer\WidgetRenderer();
 $renderer->setRenderers(array(
     new StatusBoard\Renderer\JsonRenderer()
