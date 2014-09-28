@@ -11,20 +11,20 @@
     processIsolation            = "false"
     stopOnFailure               = "false"
     syntaxCheck                 = "false"
-    bootstrap                   = "bootstrap.php">
+    bootstrap                   = "./tests/bootstrap.php">
 
     <testsuites>
         <testsuite name="StatusBoard Test Suite">
-            <directory suffix="Test.php">./</directory>
+            <directory suffix="Test.php">./tests/</directory>
         </testsuite>
     </testsuites>
 
     <filter>
         <whitelist>
-            <directory>../src/</directory>
+            <directory>./src/</directory>
             <!--<exclude>-->
-                <!--<directory>../tests</directory>-->
-                <!--<directory>../vendor</directory>-->
+                <!--<directory>./tests</directory>-->
+                <!--<directory>./vendor</directory>-->
             <!--</exclude>-->
         </whitelist>
     </filter>

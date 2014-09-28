@@ -200,13 +200,13 @@ $ composer install --dev
 Once installed, just run the following command:
 
 ```bash
-$ phpunit -c tests/
+$ phpunit
 ```
 
 You can also check for code coverage:
 
 ```bash
-$ phpunit --coverage-text -c tests/
+$ phpunit --coverage-text
 ```
 
 

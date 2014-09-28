@@ -1,5 +1,5 @@
 vendor
 composer.lock
-tests/phpunit.xml
+phpunit.xml
 composer.phar
 php-cs-fixer.phar
