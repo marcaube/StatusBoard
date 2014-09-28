@@ -1,5 +1,7 @@
 <?php
 
+namespace StatusBoard\Tests\Renderer;
+
 use StatusBoard\Renderer\JsonRenderer;
 
 class JsonRendererTest extends \PHPUnit_Framework_TestCase

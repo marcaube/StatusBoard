@@ -1,5 +1,7 @@
 <?php
 
+namespace StatusBoard\Tests\Model;
+
 use StatusBoard\Model\GraphData;
 
 class GraphDataTest extends \PHPUnit_Framework_TestCase

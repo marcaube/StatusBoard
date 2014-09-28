@@ -1,5 +1,7 @@
 <?php
 
+namespace StatusBoard\Tests\Widgets;
+
 use StatusBoard\Widget\DiyWidget;
 
 class DiyWidgetTest extends \PHPUnit_Framework_TestCase

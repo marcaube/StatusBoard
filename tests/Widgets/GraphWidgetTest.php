@@ -1,5 +1,7 @@
 <?php
 
+namespace StatusBoard\Tests\Widgets;
+
 use StatusBoard\Widget\GraphWidget;
 
 class GraphWidgetTest extends \PHPUnit_Framework_TestCase

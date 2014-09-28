@@ -11,14 +11,19 @@
             "homepage": "http://marcaube.ca"
         }
     ],
+
     "require": {
         "php": ">=5.3"
     },
+
     "autoload": {
-        "psr-0": {
-            "StatusBoard": "src/"
-        }
+        "psr-4": { "StatusBoard\\": "src/" }
     },
+
+    "autoload-dev": {
+        "psr-4": { "StatusBoard\\Tests\\": "tests/" }
+    },
+
     "extra": {
         "branch-alias": {
             "dev-master": "1.0.x-dev"

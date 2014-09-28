@@ -1,5 +1,7 @@
 <?php
 
+namespace StatusBoard\Tests\Widgets;
+
 use StatusBoard\Widget\TableWidget;
 
 class TableWidgetTest extends \PHPUnit_Framework_TestCase

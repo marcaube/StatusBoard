@@ -1,5 +1,7 @@
 <?php
 
+namespace StatusBoard\Tests\Renderer;
+
 use StatusBoard\Renderer\WidgetRenderer;
 
 class WidgetRendererTest extends \PHPUnit_Framework_TestCase
