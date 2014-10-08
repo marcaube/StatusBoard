@@ -150,24 +150,9 @@ See the official [DIY tutorial](http://www.panic.com/statusboard/docs/diy_tutori
 
 ## Installation
 
-You can install StatusBoard using composer, just create a `composer.json` file for your project:
+1. Run `composer require ob/statusboard`
 
-```json
-{
-    "require": {
-        "ob/statusboard": "*"
-    }
-}
-```
-
-And run these two commands to install it:
-
-```bash
-$ curl -sS https://getcomposer.org/installer | php
-$ composer install
-```
-
-Now, you just have to `require` the autoloader in your project to have access to the library:
+2. Now, you just have to `require` the autoloader in your project to have access to the library:
 
 ```php
 <?php
