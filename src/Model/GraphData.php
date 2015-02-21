@@ -69,7 +69,7 @@ class GraphData
 
     /**
      * @param string       $title
-     * @param string|float $value
+     * @param integer $value
      *
      * @return GraphData
      */

@@ -17,7 +17,7 @@ class TableWidget implements WidgetInterface
     /**
      * Add a row
      *
-     * @param array $row Row data
+     * @param string[] $row Row data
      *
      * @return TableWidget
      */

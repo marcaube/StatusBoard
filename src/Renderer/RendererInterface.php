@@ -23,7 +23,7 @@ interface RendererInterface
      *
      * @param WidgetInterface $widget
      *
-     * @return mixed
+     * @return boolean
      */
     public function supports(WidgetInterface $widget);
 }
